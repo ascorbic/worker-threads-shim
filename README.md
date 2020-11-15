@@ -1,0 +1,1 @@
+A worker_threads shim to allow write-file-atomically to work with rollup/microbundle in Node 10. It imports worker_threads in a try...catch block, because it's behind a flag in Node 10. Unfortunately rollup hoists that import outside the block. Aliasing worker_threads to this package fixes that.
